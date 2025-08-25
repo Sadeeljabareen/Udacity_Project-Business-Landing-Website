@@ -1,0 +1,107 @@
+/* ================= Banner section =================
+   Styles for the top banner area and text inside it
+*/
+.banner {
+  padding: 2.5rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.banner .lead {
+  max-width: 60ch;
+}
+
+/* ================= Contact page layout =================
+   Grid container holding the contact info box and the form
+*/
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* ================= Contact info box =================
+   Styles for the address, email, and phone section
+*/
+.contact-info {
+  background: #B38E58;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: var(--white);
+}
+
+/* ================= Contact form box =================
+   Wrapper around the booking form fields
+*/
+.contact-form {
+  background: #E2DAD0;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+/* ================= Form elements =================
+   Titles, notes, grid of fields, inputs, textarea, focus styles
+*/
+legend {
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: .5rem 0 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: .4rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  color: var(--text);
+  background: #CDC6C3;
+  border: 1px solid #866952;
+  border-radius: .75rem;
+  padding: .75rem .9rem;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #571F31;
+  box-shadow: 0 0 0 3px rgba(87, 31, 49, .25);
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+/* ================= Responsive (mobile) =================
+   Adjust layout for smaller screens
+*/
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,149 @@
+/* ================= Hero section =================
+   Styles for the top hero area with text + image
+*/
+.hero {
+  padding: clamp(2rem, 4vw, 4rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  grid-template-areas: "copy image";
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  grid-area: copy;
+}
+
+.hero-figure {
+  grid-area: image;
+}
+
+.hero-figure figcaption {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-top: .75rem;
+  text-align: center;
+}
+
+.hero-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* ================= Features section =================
+   Grid of feature cards under hero
+*/
+.features {
+  padding: 3rem 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-grid .card h3 {
+  color: #B38E58;
+}
+
+/* ================= About section =================
+   Two-column layout with aside note
+*/
+.about {
+  padding: 3rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.aside-note {
+  background: #E2DAD0;
+  border: 1px solid #866952;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+/* ================= Team section =================
+   Grid of team members with image, name, role, bio
+*/
+.team {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.member-figure {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  border: 1px solid #866952;
+  background: #571F31;
+  display: grid;
+  place-items: center;
+  margin-bottom: .75rem;
+}
+
+.member-name {
+  margin: .25rem 0 .25rem;
+}
+
+.member-role {
+  color: #B38E58;
+  font-weight: 800;
+  margin: 0 0 .25rem;
+}
+
+.member-bio {
+  color: var(--muted);
+}
+
+/* ================= Responsive breakpoints =================
+   Adjust layout for tablets and mobile screens
+*/
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "image";
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
